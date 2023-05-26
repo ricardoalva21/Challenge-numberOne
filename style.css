@@ -6,9 +6,9 @@
     line-height: 150%;
 }
 .logo {
-    padding-top: 10px;
-    margin-left: 10px;
-    width: 3%;
+    padding-top: 50px;
+    margin-left: 50px;
+    width: 2%;
 }
 main {
     display: flex;
@@ -53,6 +53,9 @@ main {
     height: 67px;
     margin-left: 30px;
     width: 328px;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
 }
 .btn-encriptar {
     background: #0a3871;
@@ -62,6 +65,9 @@ main {
     cursor: pointer;
     height: 67px;
     width: 328px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
 }
 .btn-copiar{
     background: #d8dfe8;
