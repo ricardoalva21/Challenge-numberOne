@@ -4,8 +4,6 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-   
-    
 }
 body{
     position: relative;
@@ -26,12 +24,8 @@ main {
     display: flex;
     margin-bottom: 50px;
     margin-left: 180px;
-    
     position:relative ;
-    /* width: 1440px; */
     height: 1024px;
-   
-   
 }
 .text-area {
     height: 400px;
@@ -42,10 +36,6 @@ main {
     margin-left: px;
     margin-top: 10px;
     margin-bottom: 75px;
-    
-    /* margin-right: 300px; */
-    /* margin-bottom: -200px; */
-   
 }
 ::placeholder {color: #0a3871;}
     .text-area:focus {
@@ -56,8 +46,6 @@ main {
         width: 400px;
         height: 900px;
         align-content: center;
-        /* margin-top: 5px; */
-   
     }
 .mensaje {
     height: 784px;
@@ -68,9 +56,7 @@ main {
     color: #0A3871;
     margin-left: 100px;
     margin-top: -120px;
-    /* margin-bottom: auto; */
     padding-left: 20px;
-    /* padding-bottom: 95px; */
     position:absolute;
     box-shadow:  0px 11px 20px -8px 
 }
@@ -88,7 +74,6 @@ main {
     align-self: stretch;
     flex-grow: 0;
     background-color: white;
-    /* margin-top: 100px; */
 }
 .aviso-de-escritura2{
     width: 336px;
@@ -104,8 +89,6 @@ main {
     align-self: stretch;
     flex-grow: 0;
     background-color: white;
-
-
 }
 .img{
     background-color: white;
@@ -126,10 +109,7 @@ main {
 }
 .botones {
     display: flex;
-    /* margin-left: 5px; */
     margin-right: 90px;
-
-
 }
 .btn-desencriptar {
     background: #d8dfe8;
@@ -143,8 +123,6 @@ main {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    
-   
 }
 .btn-encriptar {
     background: #0a3871;
@@ -157,7 +135,6 @@ main {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-   
 }
 .btn-copiar{
     font-size: 16px;
@@ -178,15 +155,12 @@ main {
     margin-left: 15px;
     font-weight: 600;
     margin-top: 30px;
-    
-    
 }
 footer{
     height: 100%;
     width: 100%;
     padding-bottom: 200px;
     text-align: center;
-
 }
 .copyright{
     padding-top: 20px;
