@@ -1,29 +1,18 @@
-const textArea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje");
+const textArea = document.querySelector('.text-area');
+const mensaje = document.querySelector('.mensaje');
+const copyBotton = document.getElementById('CopyBotton')
+const divImgText = document.getElementById('divImgText');
 
+copyBotton.style.display = 'none';
 
-
-/*Las "llaves" de encriptación que utilizaremos son las siguientes:
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-*/
-
-function btnEncriptar(){
-    const textoEncriptado =  encriptar(textArea.value)
-    mensaje.value = textoEncriptado;
-    textArea.value = "";
-    mensaje.stylebackgroundImage = "none";
-}
-function btnDesencriptar(){
-    const textoEncriptado =  desencriptar(textArea.value)
-    mensaje.value = textoEncriptado;
-    textArea.value = "";
-
-}
-
+textArea.addEventListener('input', ()=> {
+    let contenidoTextarea = textArea.value.trim();
+    if (contenidoTextarea !== '') {
+      divImgText.style.display = 'none';
+    } else {
+      divImgText.style.display = 'block';
+    }
+  });
 
 function encriptar(stringEncriptada){
     let matrizCodigo = [['e','enter'],['i', 'imes'],['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
@@ -48,32 +37,47 @@ function desencriptar(stringDesencriptada){
     }
     return stringDesencriptada;
 }
+let textoEncriptado;
 
+function btnEncriptar(){
+    const textoEncriptado =  encriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    textArea.value = '';
+    if(textoEncriptado !== ''){
+        copyBotton.style.display = 'block';
+    }    
+}
 
-function verificarContenidoTextarea() {
-    var textarea = document.getElementById('.mensaje');
-    return textarea.value.trim() !== '';
-  }
+textArea.addEventListener('focus', ()=>{
+    mensaje.value = '';
+    divImgText.style.display = 'block';
 
-
-// Obtener referencias a los elementos del DOM
-const containerPrueba = document.getElementById('ocultar-OnOFF');
-// Escuchar el evento de cambio en el textarea
-textArea.addEventListener('input', function() {
-  // Verificar si el textarea no está vacío
-  if (textArea.value.trim() !== '') {
-    // Si el textarea no está vacío, ocultar el div
-    containerPrueba.style.display = 'none';
-  } else {
-    // Si el textarea está vacío, mostrar el div
-    containerPrueba.style.display = 'block';
-  }
 });
 
-// if(textArea.value = ''){
-//     mensaje.value = ''
-// }
 
+function btnDesencriptar(){
+    const textoEncriptado =  desencriptar(textArea.value)
+    mensaje.value = textoEncriptado;
+    textArea.value = "";
+
+}
+
+
+copyBotton.addEventListener('click', function() {
+  const texto = mensaje.value;
+  
+  navigator.clipboard.writeText(texto)
+    .then(() => {
+      console.log('Texto copiado al portapapeles');
+    })
+    .catch(err => {
+      console.error('Error al copiar el texto: ', err);
+    });
+    mensaje.value = '';
+    copyBotton.style.display = 'none';
+    divImgText.style.display = 'block';
+
+});
 
 
 
