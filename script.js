@@ -37,7 +37,8 @@ function desencriptar(stringDesencriptada){
     }
     return stringDesencriptada;
 }
-let textoEncriptado;
+
+// let textoEncriptado;
 
 function btnEncriptar(){
     const textoEncriptado =  encriptar(textArea.value);
@@ -47,13 +48,11 @@ function btnEncriptar(){
         copyBotton.style.display = 'block';
     }    
 }
-
 textArea.addEventListener('focus', ()=>{
     mensaje.value = '';
     divImgText.style.display = 'block';
 
 });
-
 
 function btnDesencriptar(){
     const textoEncriptado =  desencriptar(textArea.value)
@@ -61,7 +60,6 @@ function btnDesencriptar(){
     textArea.value = "";
 
 }
-
 
 copyBotton.addEventListener('click', function() {
   const texto = mensaje.value;
@@ -78,6 +76,7 @@ copyBotton.addEventListener('click', function() {
     divImgText.style.display = 'block';
 
 });
+
 
 
 

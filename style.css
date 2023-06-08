@@ -22,10 +22,12 @@ body{
 main {
     transform: scale(0.9);
     display: flex;
+     width: 940px;
+    margin: 0 auto; 
+    /* position:relative ; 
     margin-bottom: 50px;
     margin-left: 180px;
-    position:relative ;
-    height: 1024px;
+    height: 1024px; */
 }
 .text-area {
     height: 400px;
@@ -41,24 +43,32 @@ main {
     .text-area:focus {
         outline: none;
     }   
-    .contenedor-mensaje{
+.contenedor-mensaje{
         position: relative;
-        width: 400px;
+        width: 20%;
         height: 900px;
         align-content: center;
     }
+.section-one {
+    width: 80%;
+    height: 900px;
+}
 .mensaje {
     height: 784px;
     width: 350px;
     background: white;
     border: none;
     border-radius: 24px;
-    color: #0A3871;
+    color: rgb(57, 56, 56);
+    font-size: 26px;
     margin-left: 100px;
     margin-top: -120px;
-    padding-left: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
     position:absolute;
-    box-shadow:  0px 11px 20px -8px 
+    box-shadow:  0px 11px 20px -8px ;
+    overflow: auto;
+   
 }
 .mensaje.focus {
     outline: none;
@@ -124,6 +134,18 @@ main {
     font-weight: 500;
     text-align: center;
 }
+.btn-desencriptar:hover{
+    
+   font-size: 17px;
+   border-color:#0A3871;
+   background-color: white;
+}
+.btn-desencriptar:active{
+    
+    color: #0a3871;
+    border-color: white;
+    font-size: 16px;
+}
 .btn-encriptar {
     background: #0a3871;
     border: 1px solid #0a3871;
@@ -136,6 +158,19 @@ main {
     font-size: 16px;
     font-weight: 500;
 }
+.btn-encriptar:hover{
+    
+    font-size: 17px;
+    border-color:#0A3871;
+    background-color: white;
+    color: #0A3871;
+ }
+ .btn-encriptar:active{
+     
+     color: #0a3871;
+     border-color: white;
+     font-size: 16px;
+ }
 .btn-copiar{
     font-size: 16px;
     border: 1px solid #0A3871;
@@ -147,6 +182,18 @@ main {
     position: absolute;
     width: 336px;
     margin-top: 110px;
+}
+.btn-copiar:hover{
+    background: #0A3871;
+    color: #d8dfe8;
+    font-size: 17px;
+}
+.btn-copiar:active{
+    background: #d8dfe8;
+    color: #0A3871;
+    border-color: white;
+    font-size: 16px;
+    
 }
 .informacion{
     /* display: flex; */
@@ -168,3 +215,4 @@ footer{
     font-weight: 800;
     color: #0A3871;
 }
+
